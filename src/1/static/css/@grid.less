@@ -1,0 +1,46 @@
+
+
+// 构建容器
+.make-container(){
+	.container {
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: @grid-gutter-width / 2;
+		padding-right: @grid-gutter-width / 2;
+		max-width: 100%;
+		&::after{
+			content: "";
+			display: table;
+			clear: both;
+		}
+	}
+};
+.make-container();
+
+
+// 构建列
+.make-columns(@n, @i: 1) when (@i =< @n) {
+  .column-@{i} {
+    width: (@i * 100% / @n);
+  }
+  .make-columns(@n, (@i + 1));
+};
+
+
+.make-columns(@grid-columns);
+
+
+.grid(@size){
+	.container when (@size=@screen-minimum-min) {
+		width: @container-minimum-min;
+	};
+	.container when (@size=@screen-small-min) {
+		width: @container-small-min;
+	};
+	.container when (@size=@screen-medium-min) {
+		width: @container-medium-min;
+	};
+	.container when (@size=@screen-large-min) {
+		width: @container-large-min;
+	};
+};

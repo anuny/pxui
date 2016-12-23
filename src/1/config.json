@@ -1,0 +1,19 @@
+{
+	"siteName":"pxui",
+	"siteSketch":"ui",
+	"keywords":"keywords",
+	"description":"description",
+	"author":"anuny,http://yesji.com",
+	"siteUrl":"http://localhost:3000",
+	"lang":"zh-cmn-Hans",
+	"charset":"utf-8",
+	"wap":true,
+	"siteApp":false,
+	"navigation": [
+		{
+			"url": "index.html", 
+			"title": "首页"
+		}
+
+	]
+}
