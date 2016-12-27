@@ -1,0 +1,74 @@
+/* ------------------ 
+ * RESET 
+ * --------------- */ 
+html{-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;} 
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,caption,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;} 
+table,tbody,tfoot,thead,tr,th,td{ margin:0; padding:0}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;} 
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;} 
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;} 
+hr{display:none;height:0;border:0;borde:0;margin:0;padding:0;} 
+input,select{vertical-align:middle;} 
+ul,li{list-style:none;} 
+blockquote,q{quotes:none;} 
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent; text-decoration:none; outline:none;} 
+a:hover{} 
+h1{font-size:24px;}h2{font-size:20px;}h3{font-size:18px;}h4{font-size:16px;}h5{font-size:14px;}h6{font-size:12px;} 
+/* ------------------ 
+ * STYLE 
+ * --------------- */ 
+html,body{width:100%;height:100%} 
+body{font-family:"Microsoft YaHei",Arial,PMingLiU,SimSun,sans-serif;  background:#f2f2f2 url(../images/background.jpg) center top no-repeat; background-size: cover; overflow:hidden} 
+.clear:after{visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0;} 
+
+::-webkit-scrollbar {width:6px;}
+::-webkit-scrollbar-thumb{background:#c1c1c1; border-radius:3px;}
+::-webkit-scrollbar-thumb:hover{  background-color:#a8a8a8;  }  
+
+
+
+
+.container{ width:880px; height:550px; position:absolute; left:50%; top:50%; margin:-250px 0 0 -450px }
+.header{ width:80px; height:550px; float:left; overflow:hidden}
+.header .logo{ width:60px; overflow:hidden; text-align:center}
+.header .menu{ width:60px; margin-top:50px; font-size:16px; font-weight:bold; font-family:KaiTi; text-align:center}
+.header .menu ul{}
+.header .menu ul li{line-height:50px;}
+.header .menu ul li.current{line-height:50px; }
+.header .menu ul li a{ width:60px; height:50px; display:block;color:#000; }
+.header .menu ul li a.current {background: url(../images/menu-li.png) center right no-repeat; }
+
+
+
+.main{ width:800px; height:550px; float:left;}
+.main .main-left{ width:50px; height:550px; float:left;background: url(../images/main-bg-l.png) no-repeat center left}
+.main .main-center{ width:0; height:550px;float:left; background:url(../images/main-bg-c.png) repeat-x center; overflow:hidden;}
+.main .main-right{ width:50px; height:550px; float:left;background: url(../images/main-bg-r.png) no-repeat center right}
+
+.main .head{ width:700px; height:26px; line-height:26px;  overflow:hidden;font-size:12px}
+.main .head h1{font-size:12px;color:#8E3010; float:left}
+.main a{color:#8E3010;}
+.main .head .site-url{ float:right;}
+
+.main .body{width:700px; height:440px;  margin:15px 0 0 0; }
+
+
+.main .foot{width:700px; height:26px;line-height:26px; margin-top:30px; overflow:hidden; font-size:12px; text-align:center; color:#666 }
+.main .foot a{ color:#8E3010}
+.main .foot a:hover{ text-decoration:underline}
+
+
+.page{ width:600px; height:340px;padding:50px;font-size:14px; font-weight:normal;overflow-x:hidden; font-family:SimSun ; background:#fff url(../images/body-bg.jpg) ; position:relative }
+.page-nav{ position: absolute;font-size:12px; top:20px; right:20px}
+.page-nav li{ float:left; margin-left:10px}
+.page-nav li a{ background:#000; color:#fff; padding:2.5px 5px}
+.page-nav li a:hover,.page-nav li a.current{ background:#C11F1C;}
+
+.page-main{ width:600px; height:1000px; line-height:24px; display:block; }
+
+
+.index{ margin:0; padding:0; width:700px; height:440px; overflow:hidden}
+.index img{ width:100%; height:100%}
+.index .to-case{ position:absolute; bottom:20px; right:20px;background:#C11F1C; color:#fff;  padding:2.5px 5px;font-size:12px;}
+.index .to-case:hover{ background:#f00}
+
