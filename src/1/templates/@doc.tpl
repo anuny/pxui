@@ -15,7 +15,7 @@
     <textarea id="markdown" style="display:none">
     {%- block doc %}{%- endblock %} 
     </textarea>
-    <div class="column column-9 markdown-body" id="markdown-body"></div>
+    <div class="column column-9 markdown-body content" id="markdown-body"></div>
   </div>
 </div>
 {% endblock -%} 
