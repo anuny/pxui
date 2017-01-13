@@ -1,6 +1,6 @@
 {
-	"siteName":"pxui",
-	"siteSketch":"ui",
+	"siteName":"Pxui",
+	"siteSketch":"",
 	"keywords":"keywords",
 	"description":"description",
 	"author":"anuny,http://yesji.com",
@@ -12,7 +12,45 @@
 	"navigation": [
 		{
 			"url": "index.html", 
-			"title": "首页"
+			"title": "文档",
+			"sub":[
+						{
+							"url": "index.html", 
+							"subtitle":"Start",
+							"title": "使用"
+						},
+						{
+							"url": "grid.html", 
+							"subtitle":"Grid",
+							"title": "网格"
+						},
+						{
+							"url": "typography.html", 
+							"subtitle":"Typography",
+							"title": "排版"
+						},
+						{
+							"url": "helper.html", 
+							"subtitle":"Helper",
+							"title": "辅助"
+						},
+						{
+							"url": "form.html",
+							"subtitle":"Forms", 
+							"title": "表单"
+						},
+						{
+							"url": "button.html",
+							"subtitle":"Buttons", 
+							"title": "按钮"
+						},
+						{
+							"url": "table.html", 
+							"subtitle":"Tables",
+							"title": "表格"
+						}
+				
+					]
 		}
 
 	]

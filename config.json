@@ -45,7 +45,7 @@
 		"concat":false,
 		"filter":"@",
 		"fix" : {
-			"tpl"    : "{html,htm,tpl}",
+			"tpl"    : "{html,htm,tpl,md}",
 			"css"    : "{less,css}",
 			"images" : "{jpg,png,gif,bmp,svg,ico}",
 			"fonts"  : "{otf,eot,svg,ttf,woff,woff2}",

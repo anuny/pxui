@@ -26,22 +26,24 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black" >
 <meta name="format-detection" content="telephone=no">
 {%- endif %}
+<link rel="icon" href="static/images/favicon.ico">
 <link href="static/css/pxui.css" rel="stylesheet" type="text/css">
-</head>
-<!-- /base -->
+<link href="static/css/style.css" rel="stylesheet" type="text/css">
+</head><!-- /base -->
 <body>
 <!-- header --> 
 {%- if navigation %}
-<div class="menu"> {%- for nav in navigation %}
-  <li><a href="{{nav.url}}"{%- if info.url === nav.url %} class="current"{%- endif %}>{{nav.title}}</a>{%- if nav.sub %}
-    <dl>
-      {%- for sub in nav.sub %}
-      <dd><a href="{{sub.url}}"{%- if info.url === sub.url %} class="current"{%- endif %}>{{sub.title}}</a></dd>
-      {%- endfor %}
-    </dl>
-    {%- endif %}
-</li>
-  {%- endfor %}
+<div class="header bg-gray b-b-gray m-b-5">
+  <div class="container">
+    <div class="nav">
+      <div class="nav-header"><a class="nav-brand" class="#"><img src="static/images/logo.png" />{{siteName}}</a></div>
+      <ul class="nav-group nav-group-right">
+        {%- for nav in navigation %}
+        <li><a href="{{nav.url}}"{%- if info.url === nav.url %} class="current"{%- endif %}>{{nav.title}}</a>{%- if nav.sub %}{%- set subnav = nav.sub %}{%- endif %} </li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </div>
 </div>
 {%- endif %} 
 <!-- /header --> 
@@ -50,11 +52,10 @@
 {%- endblock %} 
 <!-- /container --> 
 <!-- footer -->
-&copy; PXUI
-{%- block script %}
-{% endblock %} 
+<div class="container m-t-5 p-5 text-center">&copy; PXUI  <a href="#">MIT</a> license  .Created and maintained by the <a href="#">Anuny</a> .Powered by <a href="#">Nodejs</a> <a href="#">Gulp</a> <a href="#">Less</a></div>
 <!-- /footer --> 
+<script src="static/js/respond.min.js" type="text/javascript" ></script>
 <script src="static/js/lib.js" type="text/javascript" ></script> 
-<script src="static/js/main.js" type="text/javascript" ></script>
+{%- block javascript %}{% endblock %} 
 </body>
 </html>

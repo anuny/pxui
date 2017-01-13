@@ -1,0 +1,83 @@
+
+
+// 构建容器
+.make-container(){
+	.container {
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: @grid-gutter / 2;
+		padding-right: @grid-gutter / 2;
+		max-width: 100%;
+		&::after{
+			content: "";
+			display: table;
+			clear: both;
+		}
+	}
+	.container-fluid{
+		width: auto;
+	}
+};
+.make-container();
+
+.columns{
+	margin-right:-10px;
+	margin-left:-10px
+}
+.columns::before{
+	display:table;
+	content:""
+}
+.columns::after{
+	display:table;
+	clear:both;
+	content:""
+}
+.column{
+	float:left;
+	padding-right:10px;
+	padding-left:10px
+}
+
+// 构建列
+.make-columns(@n, @i: 1) when (@i =< @n) {
+  .column-@{i} {
+    width: (@i * 100% / @n);
+  }
+  .make-columns(@n, (@i + 1));
+};
+
+
+.make-columns(@grid-columns);
+
+.column-1,.column-2,.column-3,.column-4,.column-5,.column-6,.column-7,.column-8,.column-9,.column-10,.column-11,.column-12{ float:left; }
+
+.grid(@size){
+	.container when (@size=@screen-minimum-min) {
+		width: @container-minimum-min;
+	};
+	.container when (@size=@screen-small-min) {
+		width: @container-small-min;
+	};
+	.container when (@size=@screen-medium-min) {
+		width: @container-medium-min;
+	};
+	.container when (@size=@screen-large-min) {
+		width: @container-large-min;
+	};
+	
+	// 全屏
+	.container-fluid when (@size=@screen-minimum-min) {
+		width: auto;
+	};
+	.container-fluid when (@size=@screen-small-min) {
+		width: auto;
+	};
+	.container-fluid when (@size=@screen-medium-min) {
+		width: auto;
+	};
+	.container-fluid when (@size=@screen-large-min) {
+		width: auto;
+	};
+	
+};

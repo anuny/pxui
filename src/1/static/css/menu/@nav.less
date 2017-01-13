@@ -1,0 +1,32 @@
+
+
+// 导航
+.nav{
+	margin:0; min-height: @grid-gutter;
+	ul{
+		list-style:none;
+	}
+	li{
+		list-style:none; float:left;
+		a{ text-decoration:none}
+	}
+	.nav-header{
+		float:left;height:@grid-gutter + 10;line-height:1;padding:(@grid-gutter - 10) / 2 0;font-size: 14px;
+		.nav-brand{
+			font-size:18px;
+			line-height:@grid-gutter / 2;
+			&:hover{
+				text-decoration:none
+			}
+			img{ display:inline-block; vertical-align: middle;height:@grid-gutter / 2; margin-right:@grid-gutter / 8}
+		}
+	}
+	.nav-group{
+		float:left; margin-left:0;margin-right:0;position: relative;
+	}
+
+	.nav-group-right{
+		float:right;
+	}
+}
+
