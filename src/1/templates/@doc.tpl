@@ -2,7 +2,7 @@
 {%- block page %}
 <div class="container">
   <div class="columns">
-    <div class="column column-3">
+    <div class="column column-3 column-m-12">
       <div class="menu">
         <h3 class="menu-heading">PXUI<span class="menu-subtitle">- 轻量级前端UI组件</span></h3>
         {%- if subnav %}
@@ -15,7 +15,7 @@
     <textarea id="markdown" style="display:none">
     {%- block doc %}{%- endblock %} 
     </textarea>
-    <div class="column column-9 markdown-body content" id="markdown-body"></div>
+    <div class="column column-9 column-m-12 markdown-body content" id="markdown-body"></div>
   </div>
 </div>
 {% endblock -%} 

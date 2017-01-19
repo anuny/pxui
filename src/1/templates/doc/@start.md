@@ -1,7 +1,3 @@
-
-
-
-
 # 开始使用 
 
 你可以在官网首页下载到 Pxui 的最新版，也可以通过 GitHub 得到 Pxui 的开源包。目前我们只同步维护这两处资源渠道。一般如果你是用于实际项目，我们推荐你直接从官网下载。
@@ -38,39 +34,3 @@
   </body>
 </html>
 ```
-
-
-
-
-
-
-- [x] This task is done
-- [ ] This is still pending
-
-
-
-    npm install showdown
-
-## CDN
-
-You can also use one of several CDNs available: 
-
-* rawgit CDN
-
-        https://cdn.rawgit.com/showdownjs/showdown/<version tag>/dist/showdown.min.js
-
-* cdnjs
-
-        https://cdnjs.cloudflare.com/ajax/libs/showdown/<version tag>/showdown.min.js
-
-
-[sd-logo]: https://raw.githubusercontent.com/showdownjs/logo/master/dist/logo.readme.png
-[releases]: https://github.com/showdownjs/showdown/releases
-[atx]: http://www.aaronsw.com/2002/atx/intro
-[setext]: https://en.wikipedia.org/wiki/Setext
-
----------
-
-# Syntax
-
-``` <div>sss</div> ```

@@ -1,7 +1,17 @@
 body {
   font-size: 14px;
 }
-.content{ padding-left:30px;} 
+.header{ margin-bottom:30px}
+.content{ padding-left:20px;} 
+
+@media (max-width: 540px) {
+	.content {
+		padding-left: 10px;
+	}
+	.header{
+		margin-bottom:20px;
+	}
+}
 
 .markdown-body {
   font-family: "consolas", "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";

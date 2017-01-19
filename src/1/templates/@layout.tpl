@@ -33,7 +33,7 @@
 <body>
 <!-- header --> 
 {%- if navigation %}
-<div class="header bg-gray b-b-gray m-b-5">
+<div class="header bg-gray b-b-gray">
   <div class="container">
     <div class="nav">
       <div class="nav-header"><a class="nav-brand" class="#"><img src="static/images/logo.png" />{{siteName}}</a></div>
