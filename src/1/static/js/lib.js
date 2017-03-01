@@ -609,7 +609,7 @@ define("extend::dom", function() {
         },
         css:function(prop, val) {
             var self = this;
-            typeof prop == "string" ? this.each(function(i, ele) {
+            ('string' == typeof prop && val) ? this.each(function(i, ele) {
                 ele.style[prop] = val;
             }) :each(prop, function(k, key) {
                 self.css(k, key);
@@ -622,26 +622,26 @@ define("extend::dom", function() {
         addClass:function(className) {
             return this.each(function(i, ele) {
                 if (!dom(this).hasClass(className)) {
-                    ele.className = [ ele.className, className ].join(" ").replace(/(^\s+)|(\s+$)/g, "");
+                    ele.className = [ ele.className, className ].join(' ').replace(/(^\s+)|(\s+$)/g, '');
                 }
             });
         },
         removeClass:function(className) {
             return this.each(function(i, ele) {
-                var salf = dom(this);
-                if (salf.hasClass(className)) {
+                var $this = dom(this);
+                if ($this.hasClass(className)) {
                     ele.className = ele.className.replace(new RegExp("(\\s|^)" + className + "(\\s|$)", "g"), " ").replace(/(^\s+)|(\s+$)/g, "");
                 }
             });
         },
         hide:function() {
             return this.each(function(i, ele) {
-                ele.style.display = "none";
+                ele.style.display = 'none';
             });
         },
         show:function() {
             return this.each(function(i, ele) {
-                this.style.display = " ";
+                this.style.display = ' ';
             });
         },
         create:function(html) {
@@ -653,8 +653,9 @@ define("extend::dom", function() {
         },
         append:function(elem) {
             elem = this.create(elem);
-            this[0].appendChild(elem);
-            return this;
+			return this.each(function(i,ele){
+				ele.appendChild(elem);
+			});
         },
         scrollTop:function() {
             if (this.selector == window) {
