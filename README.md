@@ -1,15 +1,14 @@
-# fell-html 
+# Pxui
 
-> Front-end automation
+> 
 
 ## Usage
 
-First, install `gulp-ejs` as a development dependency:
+```shell
+npm install feim -g
+```
 
 ```shell
-npm install
-```
-```shell
-npm start || gulp
+feim build |  feim b
 ```
 

@@ -1,0 +1,84 @@
+
+
+// 构建容器
+.make-container(){
+	.container {
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: @grid-gutter / 2;
+		padding-right: @grid-gutter / 2;
+		width: @container-mid;
+		max-width: 100%;
+		&::after{
+			content: "";
+			display: table;
+			clear: both;
+		}
+	}
+	.container-full{
+		width: auto !important;
+	}
+};
+.make-container();
+
+
+.columns{
+	margin-right:-10px;
+	margin-left:-10px;
+	&::before{
+		display:table;
+		content:""
+	}
+	&::after{
+		display:table;
+		clear:both;
+		content:""
+	}
+}
+
+
+.column{
+	float:left;
+	padding-right:10px;
+	padding-left:10px
+}
+
+.column-1,.column-2,.column-3,.column-4,.column-5,.column-6,.column-7,.column-8,.column-9,.column-10,.column-11,.column-12{ float:left; }
+
+// 构建列
+.make-columns(@n, @i: 1) when (@i =< @n) {
+  .column-@{i} {
+    width: (@i * 100% / @n);
+  }
+  .make-columns(@n, (@i + 1));
+};
+.make-columns(@grid-columns);
+
+.make-columns-m(@n, @i: 1) when (@i =< @n) {
+  .column-m-@{i} {
+    width: (@i * 100% / @n);
+  }
+  .make-columns-m(@n, (@i + 1));
+};
+
+.make-columns-offset(@n, @i: 1) when (@i =< @n) {
+  .column-offset-@{i} {
+    margin-left: (@i * 100% / @n);
+  }
+  .make-columns-offset(@n, (@i + 1));
+};
+.make-columns-offset(@grid-columns);
+
+
+@media (max-width: @screen-min) {
+	.container {
+		width: @container-min;
+	}
+	.make-columns-m(@grid-columns);
+}
+
+@media (min-width: @screen-max) {
+	.container {
+		width: @container-max;
+	}
+}
