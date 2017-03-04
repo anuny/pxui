@@ -1,8 +1,8 @@
 {%- extends "@layout.tpl" %}
 {%- block page %}
 <div class="container">
-  <div class="columns">
-    <div class="column column-3 column-m-12">
+  <div class="row">
+    <div class="col col-3 col-m-12">
       <div class="menu">
         <h3 class="menu-heading">PXUI<span class="menu-subtitle">- 轻量级前端UI组件</span></h3>
         {%- if subnav %}
@@ -13,14 +13,14 @@
       </div>
     </div>
     <textarea id="markdown" style="display:none">
-    {%- block doc %}{%- endblock %} 
+    {%- block doc %}{%- endblock %}
     </textarea>
-    <div class="column column-9 column-m-12 markdown-body content" id="markdown-body"></div>
+    <div class="col col-9 col-m-12 markdown-body content" id="markdown-body"></div>
   </div>
 </div>
-{% endblock -%} 
-{%- block javascript %} 
-<script src="static/lib/showdown.min.js" type="text/javascript" ></script> 
+{% endblock -%}
+{%- block javascript %}
+<script src="static/lib/showdown.min.js" type="text/javascript" ></script>
 <script>
 var $ = require('extend::dom');
 var markdown = $('#markdown').text();
@@ -28,7 +28,7 @@ var converter = new showdown.Converter();
 converter.setOption('tables', true);
 converter.setOption('parseImgDimensions', true);
 var html = converter.makeHtml(markdown);
-$('#markdown-body').html(html);	
+$('#markdown-body').html(html);
 var highlight = require('plugins::highlight');
 var hl = highlight.init({
 	element:'pre', //代码元素名称
@@ -38,6 +38,6 @@ var hl = highlight.init({
 	fontSize:'14px',
 	lineNum:false,  // 是否显示行号
 	wrap:true      // 是否自动换行
-});	
-</script> 
-{% endblock -%} 
+});
+</script>
+{% endblock -%}

@@ -6,7 +6,7 @@
 HTML 中的所有标题标签，`<h1>` 到 `<h6>` 均可使用。另外，还提供了 `.h1` 到 `.h6` 类，为的是给内联（inline）属性的文本赋予标题的样式。
 
 <div class="clearfix p-4 b-gray">
-  <div class="column column-12">
+  <div class="col col-12">
     <h1>h1. Primer heading<small>Secondary text</small></h1>
     <h2>h2. Primer heading</h2>
     <h3>h3. Primer heading</h3>
@@ -45,12 +45,10 @@ HTML 中的所有标题标签，`<h1>` 到 `<h6>` 均可使用。另外，还提
   Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
 </p>
 </div>
+
 ``` html
 <p class="lead">...</p>
 ```
-
-
-
 
 ## 内联文本元素
 <div class="clearfix p-4 b-gray">
@@ -63,6 +61,7 @@ HTML 中的所有标题标签，`<h1>` 到 `<h6>` 均可使用。另外，还提
 着重：<strong>This line rendered as bold text.</strong><br>
 斜体：<em>This line rendered as italicized text.</em><br>
 </div>
+
 ``` html
 <p>You can use the mark tag to <mark>highlight</mark> text.</p>
 <p><del>This line of text is meant to be treated as deleted text.</del></p>
@@ -82,6 +81,7 @@ HTML 中的所有标题标签，`<h1>` 到 `<h6>` 均可使用。另外，还提
   <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
 </blockquote>
 </div>
+
 ``` html
 <blockquote>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
@@ -108,6 +108,7 @@ HTML 中的所有标题标签，`<h1>` 到 `<h6>` 均可使用。另外，还提
   <li>Eget porttitor lorem</li>
 </ul>
 </div>
+
 ``` html
 <ul>
   <li>Lorem ipsum dolor sit amet</li>
@@ -143,3 +144,20 @@ HTML 中的所有标题标签，`<h1>` 到 `<h6>` 均可使用。另外，还提
   <li>Eget porttitor lorem</li>
 </ol>
 </div>
+
+``` html
+<ol>
+  <li>Lorem ipsum dolor sit amet</li>
+  <li>Nulla volutpat aliquam velit
+    <ol>
+      <li>Phasellus iaculis neque</li>
+      <li>Purus sodales ultricies</li>
+      <li>Vestibulum laoreet porttitor sem</li>
+      <li>Ac tristique libero volutpat at</li>
+    </ol>
+  </li>
+  <li>Faucibus porta lacus fringilla vel</li>
+  <li>Aenean sit amet erat nunc</li>
+  <li>Eget porttitor lorem</li>
+</ol>
+```

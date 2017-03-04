@@ -25,11 +25,11 @@
 	<![endif]-->
   </head>
   <body>
-	<h1>你好，世界！</h1
-	
+	<h1>你好，世界！</h1>
+
 	<!-- Pxui Javascript -->
 	<script src="js/pxui.min.js"></script>
-	
+
   </body>
 </html>
 ```

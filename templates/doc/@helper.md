@@ -4,19 +4,19 @@
 ## 背景色 - bg
 警告框组件通过提供一些灵活的预定义消息，为常见的用户动作提供反馈消息。
 
-<div class="columns">
-  <div class="column column-1 column-m-12 bg-light">light</div>
-  <div class="column column-1 column-m-12 bg-gray">gray</div>
-  <div class="column column-1 column-m-12 bg-dark">dark</div>
-  <div class="column column-1 column-m-12 bg-blue">blue</div>
-  <div class="column column-1 column-m-12 bg-green">green</div>
-  <div class="column column-1 column-m-12 bg-red">red</div>
-  <div class="column column-1 column-m-12 bg-orange">orange</div>
-  <div class="column column-1 column-m-12 bg-purple">purple</div>
+<div class="row">
+  <div class="col col-1 col-m-12 bg-light">light</div>
+  <div class="col col-1 col-m-12 bg-gray">gray</div>
+  <div class="col col-1 col-m-12 bg-dark">dark</div>
+  <div class="col col-1 col-m-12 bg-blue">blue</div>
+  <div class="col col-1 col-m-12 bg-green">green</div>
+  <div class="col col-1 col-m-12 bg-red">red</div>
+  <div class="col col-1 col-m-12 bg-orange">orange</div>
+  <div class="col col-1 col-m-12 bg-purple">purple</div>
 </div>
 
 ``` html
-	
+
 <div class="bg-light">light</div>
 <div class="bg-gray">gray</div>
 <div class="bg-dark">dark</div>

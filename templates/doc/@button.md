@@ -39,9 +39,13 @@
 ## 按钮尺寸
 需要让按钮具有不同尺寸吗？使用 `.btn-sm` 或 `.btn-lg` 就可以获得不同尺寸的按钮。
 
-
 <button class="btn" type="button">Button</button>
 <button class="btn btn-sm" type="button">Small button</button>
+
+``` html
+<button class="btn" type="button">Button</button>
+<button class="btn btn-sm" type="button">Small button</button>
+```
 
 ## 禁用状态
 通过为按钮的背景设置 opacity 属性就可以呈现出无法点击的效果。
@@ -146,7 +150,13 @@
 </div>
 ```
 
-## 按钮组表单提交
+## 隐藏类按钮
 <span class="hidden-text-expander">
   <button type="button" class="ellipsis-expander">&hellip;</button>
 </span>
+
+``` html
+<span class="hidden-text-expander">
+  <button type="button" class="ellipsis-expander">&hellip;</button>
+</span>
+```

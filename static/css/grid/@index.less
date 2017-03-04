@@ -22,7 +22,7 @@
 .make-container();
 
 
-.columns{
+.row{
 	margin-right:-10px;
 	margin-left:-10px;
 	&::before{
@@ -37,44 +37,44 @@
 }
 
 
-.column{
+.col{
 	float:left;
 	padding-right:10px;
 	padding-left:10px
 }
 
-.column-1,.column-2,.column-3,.column-4,.column-5,.column-6,.column-7,.column-8,.column-9,.column-10,.column-11,.column-12{ float:left; }
+.col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12{ float:left; }
 
 // 构建列
-.make-columns(@n, @i: 1) when (@i =< @n) {
-  .column-@{i} {
+.make-cols(@n, @i: 1) when (@i =< @n) {
+  .col-@{i} {
     width: (@i * 100% / @n);
   }
-  .make-columns(@n, (@i + 1));
+  .make-cols(@n, (@i + 1));
 };
-.make-columns(@grid-columns);
+.make-cols(@grid-cols);
 
-.make-columns-m(@n, @i: 1) when (@i =< @n) {
-  .column-m-@{i} {
+.make-cols-m(@n, @i: 1) when (@i =< @n) {
+  .col-m-@{i} {
     width: (@i * 100% / @n);
   }
-  .make-columns-m(@n, (@i + 1));
+  .make-cols-m(@n, (@i + 1));
 };
 
-.make-columns-offset(@n, @i: 1) when (@i =< @n) {
-  .column-offset-@{i} {
+.make-cols-offset(@n, @i: 1) when (@i =< @n) {
+  .col-offset-@{i} {
     margin-left: (@i * 100% / @n);
   }
-  .make-columns-offset(@n, (@i + 1));
+  .make-cols-offset(@n, (@i + 1));
 };
-.make-columns-offset(@grid-columns);
+.make-cols-offset(@grid-cols);
 
 
 @media (max-width: @screen-min) {
 	.container {
 		width: @container-min;
 	}
-	.make-columns-m(@grid-columns);
+	.make-cols-m(@grid-cols);
 }
 
 @media (min-width: @screen-max) {
