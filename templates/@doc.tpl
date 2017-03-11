@@ -22,13 +22,61 @@
 {%- block javascript %}
 <script src="static/lib/showdown.min.js" type="text/javascript" ></script>
 <script>
-var $ = require('extend::dom');
+var $ = pxui.require('extend::dom');
 var markdown = $('#markdown').text();
 var converter = new showdown.Converter();
 converter.setOption('tables', true);
 converter.setOption('parseImgDimensions', true);
 var html = converter.makeHtml(markdown);
 $('#markdown-body').html(html);
+<<<<<<< .mine
+var highlight = pxui.require('plugins::highlight')({line:false,warp:true});
+
+highlight.extend({
+	language:'html',
+	suffix:['html','htm','tpl'],
+	rule:{
+		prolog: { pattern: /&lt;\?[\w\W]+?\?&gt;/, style: 'doctype'},
+		doctype: { pattern: /(&lt;\!DOCTYPE[\w\W]+?&gt;)/g, style: 'doctype'},
+		cdata: { pattern: /&lt;\!\[CDATA\[[\w\W]*?]]&gt;/g, style: 'doctype'},
+		comment: { pattern: /(&lt;\!--[\s\S]*?--&gt;)/g, style: 'comment'},
+		tag: { pattern: /(\&lt\;\/?\w(.|\n)*?\/?\&gt\;)/g, style: 'tag', embed: ['string'] },
+		string: highlight.language.generic.string,
+		css: { pattern: /(?:\&lt;style.*?\&gt;)([\s\S]+?)(?:\&lt;\/style\&gt;)/gi, language: 'css'},
+		script: { pattern: /(?:\&lt;script.*?\&gt;)([\s\S]+?)(?:\&lt;\/script\&gt;)/gi, language: 'js'}
+	}
+});
+highlight.extend({
+	language:'javascript',
+	suffix:['js','jsx'],
+	rule:highlight.language.generic
+});
+highlight.extend({
+	language:'css',
+	suffix:['css','less'],
+	rule:{
+		comment: highlight.language.generic.comment,
+		string: highlight.language.generic.string,
+		numbers: { pattern: /((\-?(\d+|\d+\.\d+|\.\d+)(\%|px|em|pt|in)?)|\#[0-9a-fA-F]{3}[0-9a-fA-F]{3})/g, style: 'number' },
+		property: { pattern: /(\@\w+|\:?\:\w+|[a-z\-]+\:)/g, style: 'property' }
+	}
+});
+
+highlight.init();
+</script> 
+{% endblock -%} ||||||| .r13
+var highlight = require('plugins::highlight');
+var hl = highlight.init({
+	element:'pre', //代码元素名称
+	langFix:'data-language',//语言标识
+	clsName:'HL',  // 高亮样式前缀
+	theme:'gray', // 默认主题 light,gray,blue,red,dark
+	fontSize:'14px',
+	lineNum:false,  // 是否显示行号
+	wrap:true      // 是否自动换行
+});	
+</script> 
+{% endblock -%} =======
 var highlight = require('plugins::highlight');
 var hl = highlight.init({
 	element:'pre', //代码元素名称
@@ -41,3 +89,4 @@ var hl = highlight.init({
 });
 </script>
 {% endblock -%}
+>>>>>>> .r14
