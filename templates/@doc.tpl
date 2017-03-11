@@ -29,7 +29,6 @@ converter.setOption('tables', true);
 converter.setOption('parseImgDimensions', true);
 var html = converter.makeHtml(markdown);
 $('#markdown-body').html(html);
-<<<<<<< .mine
 var highlight = pxui.require('plugins::highlight')({line:false,warp:true});
 
 highlight.extend({
@@ -63,30 +62,6 @@ highlight.extend({
 });
 
 highlight.init();
-</script> 
-{% endblock -%} ||||||| .r13
-var highlight = require('plugins::highlight');
-var hl = highlight.init({
-	element:'pre', //代码元素名称
-	langFix:'data-language',//语言标识
-	clsName:'HL',  // 高亮样式前缀
-	theme:'gray', // 默认主题 light,gray,blue,red,dark
-	fontSize:'14px',
-	lineNum:false,  // 是否显示行号
-	wrap:true      // 是否自动换行
-});	
-</script> 
-{% endblock -%} =======
-var highlight = require('plugins::highlight');
-var hl = highlight.init({
-	element:'pre', //代码元素名称
-	langFix:'data-language',//语言标识
-	clsName:'HL',  // 高亮样式前缀
-	theme:'gray', // 默认主题 light,gray,blue,red,dark
-	fontSize:'14px',
-	lineNum:false,  // 是否显示行号
-	wrap:true      // 是否自动换行
-});
+
 </script>
 {% endblock -%}
->>>>>>> .r14
