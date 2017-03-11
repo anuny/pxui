@@ -15,6 +15,7 @@
   <div class="col col-1 col-m-12 bg-purple">purple</div>
 </div>
 
+
 ``` html
 
 <div class="bg-light">light</div>
@@ -41,11 +42,12 @@
 <p></p>
 <div class="alert alert-warn"><span class="icon-close"></span>Oh snap! Change a few things up and try submitting again.</div>
 <p></p>
-<div class="alert "><span class="icon-close alert-close"></span>可关闭的警告框，依赖 <a href="#">pxui.js</a></div>
+<div class="alert "><span class="alert-close"></span>可关闭的警告框，依赖 <a href="#">pxui.js</a></div>
 
 ``` html
 <div class="alert">默认</div>
 <div class="alert alert-warn">警告</div>
 <div class="alert alert-success">成功</div>
 <div class="alert alert-error">错误</div>
+<div class="alert "><span class="alert-close"></span>可关闭的警告框</div>
 ```

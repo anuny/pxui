@@ -17,19 +17,28 @@
 
 	<!-- Pxui CSS -->
 	<link href="css/pxui.min.css" rel="stylesheet">
+	<style>
+	  /**
+       123
+      **/
 
-	<!-- IE8支持HTML5 和 响应式布局 -->
-	<!--[if lt IE 9]>
-	  <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-	  <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-	<![endif]-->
+	  body{color:#f000dd}
+	  #demo{color:#f00000}
+	  .demo{color:#f00}
+	  .demo span{color:#f00; font-size:14px;}
+	</style>
   </head>
   <body>
 	<h1>你好，世界！</h1>
-
 	<!-- Pxui Javascript -->
 	<script src="js/pxui.min.js"></script>
-
+	<script>
+	  var i = 0;
+	  i++;
+	  function test(str){
+		return "2012-06-23".match( /^(\d{4})\-(\d{2})\-(\d{2})$/ );
+	  }
+	</script>
   </body>
 </html>
 ```
