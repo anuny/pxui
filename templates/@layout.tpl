@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="renderer" content="webkit|ie-stand|ie-comp">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<title>{%- if info.title %}{{info.title}}{%- endif %}{%- if site.title %} - {{site.title}}{%- endif %}{%- if siteSketch %} - {{siteSketch}}{%- endif %}</title>
+<title>{%- if info.title %}{{info.title}}{%- endif %}{%- if site.title %} - {{site.title}}{%- endif %}{%- if siteSketch %} - {{siteSketch}}{%- endif %}- 轻量级前端UI组件</title>
 <meta name="author" content="{{author}}" />
 <meta name="copyright" content="{{siteUrl}}" />
 <meta name="keywords" content="{{keywords}}" />
@@ -21,20 +21,35 @@
 </head>
 <body>
 {%-
-	set navigation = [
+	set navigation = [  
     	{
+			"slug":"index",
 			"url": "index.html", 
-			"title": "文档",
+			"title": "起步",
 			"sub":[
                 {
+					"slug":"about",
+                    "url": "about.html", 
+                    "subtitle":"About",
+                    "title": "简介"
+                },
+				{
+					"slug":"index",
                     "url": "index.html", 
                     "subtitle":"Start",
                     "title": "使用"
-                },
+                }
+            ]
+		},
+		{
+			"slug":"style",
+			"url": "grid.html", 
+			"title": "样式",
+			"sub":[
                 {
                     "url": "grid.html", 
                     "subtitle":"Grid",
-                    "title": "网格"
+                    "title": "栅格"
                 },
                 {
                     "url": "typography.html", 
@@ -61,7 +76,28 @@
                     "subtitle":"Tables",
                     "title": "表格"
                 }
-        
+            ]
+		},
+		{
+			"slug":"widget",
+			"url": "dom.html", 
+			"title": "组件",
+			"sub":[
+                {
+                    "url": "dom.html", 
+                    "subtitle":"Dom",
+                    "title": "dom操作"
+                },
+                {
+                    "url": "popup.html", 
+                    "subtitle":"Popup",
+                    "title": "弹窗"
+                },
+				{
+                    "url": "highlight.html", 
+                    "subtitle":"Highlight",
+                    "title": "代码高亮"
+                }
             ]
 		}
 	] 
@@ -71,10 +107,11 @@
 <div class="header bg-gray b-b-gray">
   <div class="container">
     <div class="nav">
-      <div class="nav-header"><a class="nav-brand" class="#"><img src="static/images/logo.png" />{{site.title}}</a></div>
+      <div class="nav-header"><a class="nav-brand" class="#"><img src="static/images/logo.png" />{{site.title}} - 轻量级前端UI组件</a></div>
       <ul class="nav-group nav-group-right">
         {%- for nav in navigation %}
-        <li><a href="{{nav.url}}"{%- if info.url === nav.url %} class="current"{%- endif %}>{{nav.title}}</a>{%- if nav.sub %}{%- set subnav = nav.sub %}{%- endif %} </li>
+        <li><a href="{{nav.url}}"{%- if info.slug === nav.slug %} class="current"{%- endif %}>{{nav.title}}</a>{%- if nav.sub && (info.slug == nav.slug) %}{%- set subnav = nav.sub %}{%- endif %}
+		</li>
         {%- endfor %}
       </ul>
     </div>

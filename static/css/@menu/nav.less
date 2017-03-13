@@ -23,7 +23,14 @@
 	}
 	.nav-group{
 		float:left; margin-left:0;margin-right:0;position: relative;
-		li{ margin-left:@grid-gutter / 2}
+		li{
+			margin-left:@grid-gutter / 2;
+			a{
+				color:@color-dark;
+				&:hover{ color:@color-blue;}
+				&.current{color:@color-blue;}
+			}
+		}
 	}
 
 	.nav-group-right{

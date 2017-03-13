@@ -7,29 +7,29 @@ HTML 中的所有标题标签，`<h1>` 到 `<h6>` 均可使用。另外，还提
 
 <div class="clearfix p-4 b-gray">
   <div class="col col-12">
-    <h1>h1. Primer heading<small>Secondary text</small></h1>
-    <h2>h2. Primer heading</h2>
-    <h3>h3. Primer heading</h3>
-    <h4>h4. Primer heading</h4>
-    <h5>h5. Primer heading</h5>
-    <h6>h6. Primer heading</h6>
+    <h1>h1. 今夕何夕，见此良人。</h1>
+    <h2>h2. 不愧于人，不畏于天。</h2>
+    <h3>h3. 琴瑟在御，莫不静好。</h3>
+    <h4>h4. 愿一日，有女同车，颜如舜华。</h4>
+    <h5>h5. 夜如何其？夜未央。</h5>
+    <h6>h6. 北风其凉，雨雪其雾。惠而好我，携手同行。</h6>
   </div>
 </div>
 
 ``` html
-<h1>h1. Primer heading</h1>
-<h2>h2. Primer heading</h2>
-<h3>h3. Primer heading</h3>
-<h4>h4. Primer heading</h4>
-<h5>h5. Primer heading</h5>
-<h6>h6. Primer heading</h6>
+<h1>...</h1>
+<h2>...</h2>
+<h3>...</h3>
+<h4>...</h4>
+<h5>...</h5>
+<h6>...</h6>
 ```
 
-## 主体内容
+## 段落标记 - Paragraph
 <div class="clearfix p-4 b-gray">
-<p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
-<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.</p>
-<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+<p>孙子曰：凡兴师十万，出征千里，百姓之费，公家之奉，日费千金；内外骚动，怠于道路，不得操事者，七十万家。相守数年，以争一日之胜，而爱爵禄百金，不知敌之情者，不仁之至也，非人之将也，非主之佐也，非胜之主也。故明君贤将，所以动而胜人，成功出于众者，先知也。先知者，不可取于鬼神，不可象于事，不可验于度，必取于人，知敌之情者也。</p>
+<p>故用间有五：有因间，有内间，有反间，有死间，有生间。五间俱起，莫知其道，是谓神纪，人君之宝也。因间者，因其乡人而用之。内间者，因其官人而用之。反间者，因其敌间而用之。死间者，为诳事于外，令吾间知之，而传于敌间也。生间者，反报也。</p>
+<p>昔殷之兴也，伊挚在夏；周之兴也，吕牙在殷。故惟明君贤将，能以上智为间者，必成大功。此兵之要，三军之所恃而动也。</p>
 </div>
 
 ``` html
@@ -38,11 +38,11 @@ HTML 中的所有标题标签，`<h1>` 到 `<h6>` 均可使用。另外，还提
 <p> ... </p>
 ```
 
-## 中心内容
+## 中心内容 - .lead 
 通过添加 `.lead` 类可以让段落突出显示。
 <div class="clearfix p-4 b-gray">
 <p class="lead">
-  Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
+  凡军之所欲击，城之所欲攻，人之所欲杀，必先知其守将，左右，谒者，门者，舍人之姓名，令吾间必索知之。
 </p>
 </div>
 
@@ -50,12 +50,12 @@ HTML 中的所有标题标签，`<h1>` 到 `<h6>` 均可使用。另外，还提
 <p class="lead">...</p>
 ```
 
-## 内联文本元素
+## 内联文本元素 - Inline text
 <div class="clearfix p-4 b-gray">
-高亮标记 ：You can use the mark tag to <mark>highlight</mark> text.<br>
-删除文本 ：<del>This line of text is meant to be treated as deleted text.</del><br>
-无用文本：<s>This line of text is meant to be treated as no longer accurate.</s><br>
-插入文本：<ins>This line of text is meant to be treated as an addition to the document.</ins><br>
+高亮标记 ：必索敌人之间来间我者，<mark>因而利之</mark>，导而舍之，故反间可得而用也。<br>
+删除文本 ：因是而知之，故乡间、内间可得而使也；<del>因是而知之，故死间为诳事，</del>可使告敌。<br>
+无用文本：<s>因是而知之，故生间可使如期。</s>五间之事，主必知之，知之必在于反间，故反间不可不厚也。<br>
+插入文本：<ins>昔殷之兴也，伊挚在夏；周之兴也，吕牙在殷。</ins><br>
 下划线：<u>This line of text will render as underlined</u><br>
 小号文本：<small>This line of text is meant to be treated as fine print.</small><br>
 着重：<strong>This line rendered as bold text.</strong><br>
@@ -90,7 +90,7 @@ HTML 中的所有标题标签，`<h1>` 到 `<h6>` 均可使用。另外，还提
 ```
 
 
-## 无序列表
+## 无序列表 - Unordered list
 排列顺序无关紧要的一列元素。
 <div class="clearfix p-4 b-gray">
 <ul>
@@ -126,7 +126,7 @@ HTML 中的所有标题标签，`<h1>` 到 `<h6>` 均可使用。另外，还提
 </ul>
 ```
 
-## 有序列表
+## 有序列表 - Ordered list
 顺序至关重要的一组元素。
 <div class="clearfix p-4 b-gray">
 <ol>
