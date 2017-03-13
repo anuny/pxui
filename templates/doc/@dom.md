@@ -1,7 +1,7 @@
 
 # dom操作 - Form
 
-类似jQuery，dom选择和操作,无依赖组件
+类似jQuery，dom选择和操作,无依赖,模块大小 ≈ `3kb`
 
 ## 使用组件
 

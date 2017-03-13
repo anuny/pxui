@@ -1,7 +1,7 @@
 
 # 代码高亮 - Highlight
 
-简单代码高亮,支持 `html` `javascript` `css` ,可自行扩展语言支持，无依赖组件
+简单代码高亮,支持 `html` `javascript` `css` ,可自行扩展语言支持，无依赖,模块大小 ≈ `3kb`
 
 ## 使用组件
 
