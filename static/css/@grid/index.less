@@ -54,6 +54,7 @@
 };
 .make-cols(@grid-cols);
 
+// 构建列
 .make-cols-m(@n, @i: 1) when (@i =< @n) {
   .col-m-@{i} {
     width: (@i * 100% / @n);

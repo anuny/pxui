@@ -1,10 +1,6 @@
-
 # dom操作 - Form
-
 类似jQuery，dom选择和操作,无依赖,模块大小 ≈ `3kb`
-
 ## 使用组件
-
 ``` javascript
 var $ = pxui.require('extend::dom')
 ```
@@ -20,7 +16,6 @@ $('.demo')
 
 // 子元素
 $('#demo .test')
-
 ```
 
 ## 筛选 - Filter
@@ -29,11 +24,14 @@ $('#demo .test')
 // 指定
 $('#demo').find('.test')
 
+// 遍历
+$('.test li').each(function)
+
 // 第一个
 $('.test li').first()
 
 // 第N个
-$('.test li').eq(1)
+$('.test li').eq(*)
 
 // 最后一个
 $('.test li').last()
@@ -85,7 +83,4 @@ $('#demo').val()
 
 // 设置value
 $('#demo').val('test val')
-
-
 ```
-

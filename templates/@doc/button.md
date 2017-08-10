@@ -10,6 +10,7 @@
 <input class="btn" type="button" value="Input">
 <input class="btn" type="submit" value="Submit">
 
+
 ``` html
 <a class="btn" href="#" role="button">Link button</a>
 <button class="btn" type="submit">Button</button>
@@ -123,6 +124,7 @@
   <button class="btn btn-sm" type="button">Button</button>
   <button class="btn btn-sm" type="button">Button</button>
 </div>
+<p></p>
 ``` html
 <div class="btn-group">
   <button class="btn" type="button">Left</button>
@@ -140,6 +142,7 @@
   <button class="btn" type="button">Button</button>
   <button class="btn" type="button">Button</button>
 </div>
+<p></p>
 ``` html
 <div class="btn-group">
   <form class="btn-group-form">

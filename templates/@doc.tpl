@@ -20,48 +20,6 @@
 </div>
 {% endblock -%}
 {%- block javascript %}
-<script src="static/lib/showdown.min.js" type="text/javascript" ></script>
-<script>
-var $ = pxui.require('extend::dom');
-var markdown = $('#markdown').text();
-var converter = new showdown.Converter();
-converter.setOption('tables', true);
-converter.setOption('parseImgDimensions', true);
-var html = converter.makeHtml(markdown);
-$('#markdown-body').html(html);
-var highlight = pxui.require('plugins::highlight')({line:false,warp:true});
-
-highlight.extend({
-	language:'html',
-	suffix:['html','htm','tpl'],
-	rule:{
-		prolog: { pattern: /&lt;\?[\w\W]+?\?&gt;/, style: 'doctype'},
-		doctype: { pattern: /(&lt;\!DOCTYPE[\w\W]+?&gt;)/g, style: 'doctype'},
-		cdata: { pattern: /&lt;\!\[CDATA\[[\w\W]*?]]&gt;/g, style: 'doctype'},
-		comment: { pattern: /(&lt;\!--[\s\S]*?--&gt;)/g, style: 'comment'},
-		tag: { pattern: /(\&lt\;\/?\w(.|\n)*?\/?\&gt\;)/g, style: 'tag', embed: ['string'] },
-		string: highlight.language.generic.string,
-		css: { pattern: /(?:\&lt;style.*?\&gt;)([\s\S]+?)(?:\&lt;\/style\&gt;)/gi, language: 'css'},
-		script: { pattern: /(?:\&lt;script.*?\&gt;)([\s\S]+?)(?:\&lt;\/script\&gt;)/gi, language: 'js'}
-	}
-});
-highlight.extend({
-	language:'javascript',
-	suffix:['js','jsx'],
-	rule:highlight.language.generic
-});
-highlight.extend({
-	language:'css',
-	suffix:['css','less'],
-	rule:{
-		comment: highlight.language.generic.comment,
-		string: highlight.language.generic.string,
-		numbers: { pattern: /((\-?(\d+|\d+\.\d+|\.\d+)(\%|px|em|pt|in)?)|\#[0-9a-fA-F]{3}[0-9a-fA-F]{3})/g, style: 'number' },
-		property: { pattern: /(\@\w+|\:?\:\w+|[a-z\-]+\:)/g, style: 'property' }
-	}
-});
-
-highlight.init();
-
-</script>
+<script src="static/lib/respond.min.js" type="text/javascript" ></script>
+<script src="static/pxui.js" type="text/javascript" pxui-deps="*/js/plugin.dom,*/js/plugin.highlight,*/js/plugin.markdown,*/js/init"></script> 
 {% endblock -%}

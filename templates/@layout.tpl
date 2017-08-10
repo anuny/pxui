@@ -19,7 +19,7 @@
 <link href="static/css/pxui.css" rel="stylesheet" type="text/css">
 <link href="static/css/style.css" rel="stylesheet" type="text/css">
 </head>
-<body>
+<body pxui-ctrl="public.init">
 {%-
 	set navigation = [  
     	{
@@ -97,6 +97,16 @@
                     "url": "highlight.html", 
                     "subtitle":"Highlight",
                     "title": "代码高亮"
+                },
+				{
+                    "url": "markdown.html", 
+                    "subtitle":"Markdown",
+                    "title": "Markdown解析"
+                },
+				{
+                    "url": "template.html", 
+                    "subtitle":"Template",
+                    "title": "模板引擎"
                 }
             ]
 		}
@@ -126,8 +136,7 @@
 <!-- footer -->
 <div class="container m-t-5 p-5 text-center">&copy; PXUI  <a href="#">MIT</a> license  .Created and maintained by the <a href="#">Anuny</a> .Powered by <a href="#">Nodejs</a> <a href="#">Gulp</a> <a href="#">Less</a></div>
 <!-- /footer --> 
-<script src="static/lib/respond.min.js" type="text/javascript" ></script>
-<script src="static/js/lib.js" type="text/javascript" ></script> 
+
 {%- block javascript %}{% endblock %} 
 </body>
 </html>
